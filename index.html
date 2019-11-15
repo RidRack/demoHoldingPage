@@ -1,1 +1,139 @@
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
 
+<div class="stage">
+  <div class="container">
+
+      <div class="hero__video">
+        <div class="hero__video-film">
+          <video autoplay="" muted="" loop="" playsinline="" preload="" poster="assets/img/work.jpg">
+            <source id="header-video" src="assets/video/work.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    <div class="stage-text">
+      <div class="heading--text">
+        <h1>Coming soon</h1>
+      </div>
+      <div class="heading--text callToAction">
+        <h2>This website is currently under construction. Please come back soon. But before you go, <br>
+          <span class="callToAction">why not subscribe to our mailing list?</span>
+        </h2>
+        <div>
+          <a href="#">
+            <span class="bottom"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="logo">Logo
+      <span class="logotext">Get in touch.</span>
+      <span class="bottom-no-circle" />
+    </div>
+
+    <span class="close"></span>
+
+    <form action="#" class="form" method="post" target="_blank">
+      <div class="form-col">
+        <div>
+          <label for="fname fText">Your Full Name</label>
+          <input type="text" name="fname" id="fname" />
+        </div>
+        <div>
+          <label for="femail">Your Email</label>
+          <input type="text" name="femail" id="femail" />
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="text" name="phone" id="phone" />
+        </div>
+        <div>
+          <label for="bname">Business Name</label>
+          <input type="text" name="bname" id="bname" />
+        </div>
+      </div>
+      <div class="form-col">
+        <div>
+          <button type="submit">Send</button>
+        </div>
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+      </div>
+    </form>
+  </div>
+</footer>
+</div>
+
+<script>
+  const easing = [0.86, 0, 0.07, 1];
+  const footer = document.querySelector('.footer');
+  const callToAction = document.querySelectorAll('.callToAction');
+  const closeElement = document.querySelector('.close');
+
+  $(document).ready(function () {
+
+    openContactForm = function () {
+      $('h3').velocity({
+        translateX: '-200px',
+        opacity: 0
+      }, 800, easing);
+
+      $('h2').velocity({
+        translateY: 100,
+        opacity: 0
+      }, { duration: 800, delay: 300 }, easing);
+
+      $('.footer').addClass('is-active').velocity({
+        maxHeight: 1000
+      }, { duration: 800, delay: 600 }, easing);
+
+      $('.close').velocity({
+        opacity: 1
+      }, { duration: 800, delay: 600 }, easing)
+
+      $('form').velocity({
+        translateY: 0,
+        opacity: 1
+      }, { duration: 800, delay: 600 }, easing);
+    };
+
+    closeContactForm = function (e) {
+      e.stopPropagation();
+
+      $('h3').velocity('reverse', { duration: 800, delay: 800 }, easing);
+      $('h1').velocity('reverse', { duration: 800, delay: 300 }, easing);
+      $('h2').velocity('reverse', { duration: 800 }, easing);
+      $('.close').velocity('reverse', { duration: 800 }, easing)
+      $('form').velocity('reverse', { duration: 800 }, easing);
+      $('.footer').velocity('reverse', { duration: 800 }, easing);
+
+      setTimeout(function () {
+        $('.footer').removeClass('is-active');
+      }, 900)
+
+      $('h1').velocity({
+        translateY: 0
+      }, 0);
+
+      $('form').velocity({
+        translateY: 200,
+        opacity: 0
+      }, 0);
+    };
+
+    $('.close').on('click', closeContactForm);
+
+
+
+    footer.addEventListener('click', openContactForm);
+    callToAction.forEach(element => element.addEventListener('click', openContactForm));
+
+  });
+</script>
