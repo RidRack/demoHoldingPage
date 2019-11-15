@@ -1,13 +1,15 @@
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </script>
 </head>
 
 <div class="stage">
   <div class="container">
 
+    <!-- Hero video  -->
     <div class="hero__video">
       <div class="hero__video-film">
         <video autoplay="" muted="" loop="" playsinline="" preload="" poster="assets/img/work.jpg">
@@ -15,6 +17,7 @@
         </video>
       </div>
     </div>
+    <!-- Main contents -->
     <div class="stage-text">
       <div class="heading--text">
         <h1>Coming soon</h1>
@@ -29,6 +32,7 @@
           </a>
         </div>
       </div>
+      <!-- Social icons -->
       <div class="social">
         <ul class="social__links">
           <li><a href="#"><span class="fa fa-twitter"></span></a></li>
@@ -49,6 +53,7 @@
 
     <span class="close"></span>
 
+    <!-- Form to get in contact -->
     <form action="#" class="form" method="post" target="_blank">
       <div class="form-col">
         <div>
@@ -79,6 +84,8 @@
 </footer>
 </div>
 
+<!-- Adds some action around the form to make it more mobile rather 
+rather then just a box -->
 <script>
   const easing = [0.86, 0, 0.07, 1];
   const footer = document.querySelector('.footer');
