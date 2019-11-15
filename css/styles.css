@@ -321,6 +321,45 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   transform: rotate(135deg);
 }
 
+/** Social and Shares */
+.social {
+  width: 100%;
+}
+
+.social__links {
+  text-align: center;
+  list-style-type: none;
+}
+.social__links li {
+  display: inline-block;
+}
+.social__links li:nth-of-type(n+2) {
+  margin-left: 12px;
+}
+.social__links a {
+  padding: 8px 0;
+  display: block;
+  width: 60px;
+  text-align: center;
+  color: #fff;
+  border: 5px solid;
+  border-radius: 50%;
+  transition: opacity 0.235s ease-in-out;
+}
+.social__links a:hover {
+  opacity: 0.5;
+}
+.social__links .fa {
+  vertical-align: middle;
+  font-size: 40px;
+}
+
+.fa {
+  vertical-align: middle;
+  font-size: 21px;
+}
+
+/** Media Queries, only a few set here */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   h1 {
     font-size: 150px;

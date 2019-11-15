@@ -2,18 +2,19 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
 </head>
 
 <div class="stage">
   <div class="container">
 
-      <div class="hero__video">
-        <div class="hero__video-film">
-          <video autoplay="" muted="" loop="" playsinline="" preload="" poster="assets/img/work.jpg">
-            <source id="header-video" src="assets/video/work.mp4" type="video/mp4">
-          </video>
-        </div>
+    <div class="hero__video">
+      <div class="hero__video-film">
+        <video autoplay="" muted="" loop="" playsinline="" preload="" poster="assets/img/work.jpg">
+          <source id="header-video" src="assets/video/work.mp4" type="video/mp4">
+        </video>
       </div>
+    </div>
     <div class="stage-text">
       <div class="heading--text">
         <h1>Coming soon</h1>
@@ -27,6 +28,13 @@
             <span class="bottom"></span>
           </a>
         </div>
+      </div>
+      <div class="social">
+        <ul class="social__links">
+          <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+          <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+          <li><a href="https://github.com/RidRack/demoHoldingPage/"><span class="fa fa-github"></span></a></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -65,7 +73,7 @@
           <button type="submit">Send</button>
         </div>
         <div style="position: absolute; left: -5000px;" aria-hidden="true">
-      </div>
+        </div>
     </form>
   </div>
 </footer>
@@ -129,8 +137,6 @@
     };
 
     $('.close').on('click', closeContactForm);
-
-
 
     footer.addEventListener('click', openContactForm);
     callToAction.forEach(element => element.addEventListener('click', openContactForm));
