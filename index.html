@@ -102,6 +102,8 @@ rather then just a box -->
   const closeElement = document.querySelector('.close');
 
   $(document).ready(function () {
+    const formHeightOpen = 1300;
+    const formHeightClose = 200;
 
     openContactForm = function () {
       $('h3').velocity({
@@ -155,6 +157,14 @@ rather then just a box -->
         translateY: 200,
         opacity: 0
       }, 0);
+
+      setTimeout(function () {
+        $('.footer').css('max-height', "");
+      }, 900)
+
+      $('.close').velocity({
+        opacity: 0
+      }, { duration: 600, delay: 100 }, easing)
     };
 
     $('.close').on('click', closeContactForm);
