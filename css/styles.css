@@ -55,7 +55,6 @@ h2 {
   text-transform: uppercase;
   color: rgb(255, 6, 72);
   line-height: 1;
-  pointer-events: none;
 }
 
 h2 span {
@@ -63,9 +62,12 @@ h2 span {
   text-transform: uppercase;
   color: rgb(255, 255, 255);
   line-height: 1;
-  pointer-events: none;
   position: relative;
   z-index: 1000;
+}
+
+.fade:hover {
+  opacity: 60%;
 }
 
 /* Footer CSS */
@@ -327,22 +329,26 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   font-size: 21px;
 }
 
-/** Media Queries, only a few set here */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+
+
+/** Media Queries, only a few set here, not a full set */
+@media only screen and (max-device-width: 1025px) {
   h1 {
-    font-size: 150px;
+    font-size: 100px;
   }
   h2 {
-    font-size: 75px;
+    font-size: 40px;
   }
   .logo {
-    font-size: 75px
+    font-size: 40px
   }
   .logo .logoText {
-    font-size: 60px
+    font-size: 30px
   }
   .footer {
-    max-height: 200px;
+    max-height: 100px;
   }
   .form-col {
     width: 100%;
@@ -353,6 +359,38 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   }
   button {
     font-size: 30px;
+    margin: 0;
+  }
+  input {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
+  h1 {
+    font-size: 200px;
+  }
+  h2 {
+    font-size: 100px;
+  }
+  .logo {
+    font-size: 100px
+  }
+  .logo .logoText {
+    font-size: 60px
+  }
+  .footer {
+    max-height: 300px;
+  }
+  .form-col {
+    width: 100%;
+    padding: 10px;
+  }
+  label {
+    font-size: 75px;
+  }
+  button {
+    font-size: 40px;
     margin: 0;
   }
   input {

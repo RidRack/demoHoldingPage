@@ -24,11 +24,11 @@
       </div>
       <div class="heading--text callToAction">
         <h2>This website is currently under construction. Please come back soon. But before you go, <br>
-          <span class="callToAction">why not subscribe to our mailing list?</span>
+          <span class="callToAction fade">why not subscribe to our mailing list?</span>
         </h2>
         <div>
           <a href="#">
-            <span class="bottom"></span>
+            <span class="bottom fade"></span>
           </a>
         </div>
       </div>
@@ -47,7 +47,7 @@
 <footer class="footer">
   <div class="container">
     <div class="logo">Logo
-      <span class="logotext">Get in touch.</span>
+      <span class="logotext">Sign up</span>
       <span class="bottom-no-circle" />
     </div>
 
@@ -75,7 +75,7 @@
       </div>
       <div class="form-col">
         <div>
-          <button type="submit">Send</button>
+          <button type="submit">SUBMIT</button>
         </div>
         <div style="position: absolute; left: -5000px;" aria-hidden="true">
         </div>
@@ -103,32 +103,32 @@ rather then just a box -->
       $('h2').velocity({
         translateY: 100,
         opacity: 0
-      }, { duration: 800, delay: 300 }, easing);
+      }, { duration: 600, delay: 300 }, easing);
 
       $('.bottom').velocity({
         translateY: 100,
         opacity: 0
-      }, { duration: 800, delay: 300 }, easing);
+      }, { duration: 600, delay: 300 }, easing);
 
       $('.footer').addClass('is-active').velocity({
-        maxHeight: 1000
-      }, { duration: 800, delay: 600 }, easing);
+        maxHeight: 1300
+      }, { duration: 600, delay: 300 }, easing);
 
       $('.close').velocity({
         opacity: 1
-      }, { duration: 800, delay: 600 }, easing)
+      }, { duration: 600, delay: 300 }, easing)
 
       $('form').velocity({
         translateY: 0,
         opacity: 1
-      }, { duration: 800, delay: 600 }, easing);
+      }, { duration: 600, delay: 300 }, easing);
     };
 
     closeContactForm = function (e) {
       e.stopPropagation();
 
-      $('h3').velocity('reverse', { duration: 800, delay: 800 }, easing);
-      $('h1').velocity('reverse', { duration: 800, delay: 300 }, easing);
+      $('h3').velocity('reverse', { duration: 800, delay: 200 }, easing);
+      $('h1').velocity('reverse', { duration: 800, delay: 200 }, easing);
       $('h2').velocity('reverse', { duration: 800 }, easing);
       $('.close').velocity('reverse', { duration: 800 }, easing)
       $('form').velocity('reverse', { duration: 800 }, easing);
