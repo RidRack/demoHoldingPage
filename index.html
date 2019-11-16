@@ -136,6 +136,7 @@ rather then just a box -->
     };
 
     closeContactForm = function (e) {
+      $('.footer').css('max-height', "");
       e.stopPropagation();
 
       $('h3').velocity('reverse', { duration: 800, delay: 200 }, easing);
@@ -158,13 +159,6 @@ rather then just a box -->
         opacity: 0
       }, 0);
 
-      setTimeout(function () {
-        $('.footer').css('max-height', "");
-      }, 900)
-
-      $('.close').velocity({
-        opacity: 0
-      }, { duration: 600, delay: 100 }, easing)
     };
 
     $('.close').on('click', closeContactForm);
