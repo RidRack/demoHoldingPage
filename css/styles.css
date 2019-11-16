@@ -226,6 +226,10 @@ button:hover {
   background-color: #ff1d83;
 }
 
+.fText {
+  color: black;
+}
+
 /** video */
 
 .hero__video {
