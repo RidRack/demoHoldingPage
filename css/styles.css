@@ -364,6 +364,10 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   input {
     font-size: 40px;
   }
+  .close{
+    height: 90px;
+    width: 90px;
+  }
 }
 
 @media only screen and (max-device-width: 768px) {
@@ -395,5 +399,9 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   }
   input {
     font-size: 40px;
+  }
+  .close{
+    height: 90px;
+    width: 90px;
   }
 }
