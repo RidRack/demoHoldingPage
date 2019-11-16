@@ -1,9 +1,11 @@
 * {
   box-sizing: border-box;
 }
+
 /* 
 Main Styles
 */
+
 html {
   height: 100%;
 }
@@ -152,6 +154,25 @@ h3 {
   transform: rotate(180deg);
 }
 
+.contact__footer {
+  margin-top: 10px;
+  font-size: 1em;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+}
+
+.contact__footer a {
+  color: rgb(255, 6, 72);
+  text-decoration: underline
+}
+
+.contact__footer a:hover {
+  color: white;
+  text-decoration: none
+}
+
 /* Form CSS */
 
 form {
@@ -296,6 +317,7 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
 }
 
 /** Social and Shares */
+
 .social {
   width: 100%;
 }
@@ -304,12 +326,15 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   text-align: center;
   list-style-type: none;
 }
+
 .social__links li {
   display: inline-block;
 }
+
 .social__links li:nth-of-type(n+2) {
   margin-left: 12px;
 }
+
 .social__links a {
   padding: 8px 0;
   display: block;
@@ -320,9 +345,11 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   border-radius: 50%;
   transition: opacity 0.235s ease-in-out;
 }
+
 .social__links a:hover {
   opacity: 0.5;
 }
+
 .social__links .fa {
   vertical-align: middle;
   font-size: 40px;
@@ -333,11 +360,8 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   font-size: 21px;
 }
 
-
-
-
-
 /** Media Queries, only a few set here, not a full set */
+
 @media only screen and (max-device-width: 1025px) {
   h1 {
     font-size: 100px;
@@ -368,9 +392,12 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   input {
     font-size: 40px;
   }
-  .close{
+  .close {
     height: 90px;
     width: 90px;
+  }
+  .contact__footer {
+    font-size: 25px;
   }
 }
 
@@ -404,8 +431,11 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
   input {
     font-size: 40px;
   }
-  .close{
+  .close {
     height: 90px;
     width: 90px;
+  }
+  .contact__footer {
+    font-size: 30px;
   }
 }
